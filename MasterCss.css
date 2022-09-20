@@ -1,0 +1,187 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: serif; */
+    text-decoration: none;
+    background-color: #F4F4F4;
+}
+.container {
+    width: 400px;
+    height: 600px;
+    margin: 30px auto 150px auto;
+    position: relative;
+}
+h1 {
+    font-family:  "Cinzel", serif;
+    color: white;
+    font-size: 0;
+}
+h1 span {padding: 0 5px; font-size: 2.6rem;letter-spacing: 2px;}
+.M {background-color: #FFB400;}
+.A {background-color: #FF5A5F;}
+.S {background-color: #8CE071;}
+.T {background-color: #00D1C1;}
+.E {background-color: #007A87;}
+.R {background-color: #7B0051;}
+.MIND {color: #333333;}
+
+.rules {margin: 20px 0;}
+.rulesToggle {font-size: 1.2rem; cursor: pointer;}
+#infoHidden {
+    border: #EAEBE9 1px solid;
+    padding: 10px;
+}
+
+.leftSide {
+    width: 300px;
+    float: left;
+}
+.leftSide::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.rightSide {
+    width: 50px;
+    float: right;
+    margin-top: 10px;
+}
+.rightSide::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.peg input[type = "radio"] + label {
+    width: 40px;
+    height: 40px;
+    border: #EAEBE9 2px solid;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.selected input[type = "radio"] + label {border: #525554 2px solid;}
+.zero input[type = "radio"] + label {background-color: #FFB400;}
+.one input[type = "radio"] + label {background-color:#FF5A5F;}
+.two input[type = "radio"] + label {background-color:#8CE071;}
+.three input[type = "radio"] + label {background-color:#00D1C1;}
+.four input[type = "radio"] + label {background-color:#007A87;}
+.five input[type = "radio"] + label {background-color:#7B0051;}
+.peg input[type = "radio"] {display: none;}
+
+/* Left Side Styling*/
+.row {
+    width: 280px;
+    padding: 10px 0 10px 10px;
+    overflow: hidden;
+}
+.current {
+    border: #A8A8A8 1px solid;
+}
+.left {
+    float: left;
+}
+.left i {
+    font-size: 1.5rem;
+    margin: 7px 0 0 15px; 
+    cursor: pointer;
+}
+
+/* Hints section styling */
+.hints {
+    width: 44px;
+    margin-top: 2px;
+    float: right;
+}
+.hint {
+   width: 12px;
+   height: 12px;
+   border: 1px solid #28222d;
+   border-radius: 50%;
+   display: inline-block; 
+   margin-right: 5px;
+   position: relative;
+}
+.correctColorCorrectPosition {
+    background-color: #555461;
+}
+.correctColorWrongPosition {
+    background-color: #FFFFFF;
+}
+/* .wrongColorWrongPosition {
+    background-color: red;
+} */
+.hint.none-matches::before {
+    transform: rotate(45deg);
+}
+.hint.none-matches::before {
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    content: ' ';
+    height: 8px;
+    width: 2px;
+    background-color: #333;
+}
+.hint.none-matches::after {
+    transform: rotate(-45deg);
+}
+.hint.none-matches::before, .none-matches::after {
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    content: ' ';
+    height: 8px;
+    width: 2px;
+    background-color: #333;
+}
+
+/* End Game styling */
+.endgame {
+    position: absolute;
+    width: 350px;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 75%);
+    text-align: center;
+    color: #FFFFFF;
+    left: 50%;
+    top: 30%;
+    margin-left: -175px;
+}
+.win {
+    background-color: #00C653;
+}
+.failure {
+    background-color: #DB4445;
+}
+.endgame-header {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+.endgame-button {
+    width: 130px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.25s ease;
+    letter-spacing: 1px;
+}
+.endgame-button:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.lowOpacity {
+    opacity: 50%;
+}
+footer {
+    width: 400px;
+    border-top: 1px solid #A8A8A8;
+    margin: 30px auto 10px auto;
+    padding: 8px 0;
+}
